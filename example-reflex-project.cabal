@@ -1,0 +1,26 @@
+name:                example-reflex-project
+version:             0.1.0.0
+license:             BSD3
+license-file:        LICENSE
+author:              Divam
+maintainer:          dfordivam@gmail.com
+category:            Web
+build-type:          Simple
+extra-source-files:  ChangeLog.md, README.md
+cabal-version:       >=1.10
+
+library
+  exposed-modules:   Frontend
+  build-depends:       base >=4.11 && <5
+                       , reflex-dom-core
+                       , lens
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+
+executable example-reflex-project
+  main-is:             main.hs
+  hs-source-dirs:      app
+  build-depends:       base >=4.10 && <5
+                       , reflex-dom
+                       , example-reflex-project
+  default-language:    Haskell2010
